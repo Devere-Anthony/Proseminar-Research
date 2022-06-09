@@ -89,10 +89,13 @@ csv
 # Therefore, using this first method, we should keep x1 and 
 # at least x2 in our model. 
 
+# NOTE: This is only ONE method to help determine which variables 
+# should be dropped. This method is appropriate when the number of
+# observations available for fitting the model is large. 
 
 
-
-
+# TO DO: Go back over the notes and aggregate them to place into 
+# one R Notebook file for furture research reference. 
 
 
 
