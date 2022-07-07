@@ -59,7 +59,6 @@ x = subset(normal_recon_sample, select = c("pkts", "bytes", "state_number", "dur
                                            "sum", "min", "max", "spkts", "dpkts", "sbytes", 
                                            "dbytes", "rate", "srate", "drate"))
 
-cor(x)
 
 
 
