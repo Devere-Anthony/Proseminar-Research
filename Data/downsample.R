@@ -66,3 +66,57 @@ data$AR_P_Proto_P_Sport <- NULL
 data$N_IN_Conn_P_SrcIP <- NULL
 
 write.csv(data, "downsampled.csv")
+
+# Create test-train split 
+normal <- data[data$category=="Normal",]
+normal_train <- normal[1:344,]
+normal_test <- normal[345:nrow(normal) - 1,]
+
+recon <- data[data$category=="Reconnaissance",]
+recon_train <- recon[1:3656,]
+recon_test <- recon[3657:nrow(recon)-1,]
+
+# Combine to create the two datasets 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
