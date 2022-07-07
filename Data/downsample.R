@@ -77,11 +77,10 @@ recon_train <- recon[1:3656,]
 recon_test <- recon[3657:nrow(recon)-1,]
 
 # Combine to create the two datasets 
-
-
-
-
-
+training <- rbind(normal_train, recon_train)
+testing <- rbind(normal_test, recon_test)
+write.csv(training, "training_set.csv")
+write.csv(testing, "testing_set.csv")
 
 
 
