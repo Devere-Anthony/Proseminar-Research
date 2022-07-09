@@ -55,27 +55,29 @@ vif(m3)    # check out vif values for this model
 # the diagnostics for logistic regression.
 
 
+# Still getting the "algorithm did not converge error. This is possibly due to one or more of the variables perfectly 
+# predicting the response. Let's build the model step-wise to try and figure out which one is possibly the problem. 
+m4 <- glm(
+  attack ~ flgs_number + state_number + min + srate + TnP_PDstIP,
+  data = training, 
+  family = "binomial"
+)
+summary(m4)
 
+# Drop statistically insignificant variables 
+m5 <- glm(
+  attack ~ flgs_number + state_number + srate + TnP_PDstIP, 
+  data = training, 
+  family = "binomial"
+)
+summary(m5)
+vif(m5)
 
+# This is a little strange to me, but go ahead and use this methodology to go forward with analysis. This ultimately ended
+# up giving me a model that only have four predictors. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# At this point I'm not entirely sure how to interpet all the results, so take this time to go ahead and read up on 
+# some of the material before proceeding. 
 
 
 
